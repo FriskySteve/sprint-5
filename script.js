@@ -103,3 +103,63 @@
 //   products.some((product) => product.price > 50 && product.name.length >= 5);
 
 // console.log(hasPremiumProduct(products));
+
+// Napisz funkcję, która filtruje tablicę liczb, zwracając tylko te elementy, które są większe niż 10.
+// Użyj metody filter() do przefiltrowania tablicy.
+// Wyświetl przefiltrowaną tablicę w konsoli.
+
+// const numbers = [5, 10, 15, 20, 25];
+// const filteredNumbers = numbers.filter((number) => number > 10);
+// console.log(filteredNumbers);
+
+// Znajdź największy element w tablicy.
+// Użyj reduce() do porównania elementów.
+// Wyświetl wynik w konsoli
+
+// const numbers = [10, 50, 30, 40, 20];
+// const maxElement = numbers.reduce((max, number) =>
+//   number > max ? number : max
+// );
+// console.log(maxElement);
+
+// Oblicz sumę liczb parzystych
+// Użyj metody filter i reduce w notacji łańcuchowej
+// Wyświetl wynik w konsoli
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// const evenNumberSum = numbers
+//   .filter((number) => number % 2 === 0)
+//   .reduce((number, next) => number + next, 0);
+// console.log(evenNumberSum);
+
+// Napisz funkcję, która zwraca tablicę unikalnych liczb, które są większe niż 10.
+// Użyj metody filter i reduce w notacji łańcuchowej
+// Wyświetl wynik w konsoli
+
+const numbers = [11, 20, 12, 20, 15, 11, 15, 12];
+const uniqNumbers = numbers
+  .filter((number) => number > 10)
+  .reduce((uniq, next) => {
+    if (!uniq.includes(next)) {
+      uniq.push(next);
+    }
+    return uniq;
+  }, []);
+console.log(uniqNumbers);
+
+// Mając tablicę obiektów reprezentujących sprzedaż produktów, napisz funkcję, która obliczy łączny dochód z produktów, których cena jednostkowa przekracza 50 zł, po zastosowaniu 10% zniżki.
+// Użyj metody filter map i reduce w notacji łańcuchowej
+// Wyświetl wynik w konsoli
+
+// const sales = [
+//   { product: "Sok pomarańczowy", units: 30, pricePerUnit: 40 },
+//   { product: "Czekolada", units: 20, pricePerUnit: 60 },
+//   { product: "Kawa", units: 10, pricePerUnit: 70 },
+//   { product: "Herbata", units: 40, pricePerUnit: 30 },
+// ];
+
+// const totalIncome = sales
+//   .filter((product) => product.pricePerUnit > 50)
+//   .map((product) => product.pricePerUnit * 0.9 * product.units)
+//   .reduce((acc, next) => acc + next, 0);
+// console.log(totalIncome);
