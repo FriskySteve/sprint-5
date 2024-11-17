@@ -43,3 +43,63 @@
 // people.forEach((element) => {
 //   console.log(`Imię: ${element.firstName}, Nazwisko: ${element.lastName}`);
 // });
+
+// Napisz funkcję areAllAdults, która przyjmuje tablicę obiektów osób. Funkcja powinna zwrócić true jeżeli wszystkie osoby są pełnoletnie (18 lat lub więcej), a false w przeciwnym wypadku.
+// Użyj odpowiedniej metody do iteracji po elementach tablicy
+// Wyświetl wynik wywołania funkcji w konsoli
+
+// const people = [
+//   { name: "Anna", age: 22 },
+//   { name: "Bob", age: 17 },
+//   { name: "Carla", age: 20 },
+// ];
+
+// function areAllAdults(table) {
+//   return table.every((age) => age >= 18);
+// }
+
+// console.log(areAllAdults(people));
+
+// const dorosli = (ludzie) => people.every((person) => person.age >= 18);
+// console.log(dorosli(people));
+
+// Napisz funkcję existsExpiredProduct, która przyjmuje tablicę produktów . Funkcja powinna zwrócić true jeśli jakikolwiek produkt przekroczył datę ważności.
+// Użyj odpowiedniej metody do iteracji po elementach tablicy.
+// Wyświetl wynik wywołania funkcji w konsoli.
+
+// const products = [
+//   { name: "Milk", expiryDate: "2023-05-01" },
+//   { name: "Eggs", expiryDate: "2024-01-15" },
+// ];
+
+// const today = new Date();
+// const existsExpiredProduct = (product) =>
+//   products.some((product) => new Date(product.expiryDate) <= new Date());
+// console.log(existsExpiredProduct(products));
+
+// Napisz funkcję checkEvenNumbers, która przyjmuje tablicę liczb i zwraca true tylko wtedy, gdy każda liczba parzysta w tablicy jest większa od 10.
+// Użyj odpowiedniej metody do iteracji po elementach tablicy.
+// Wyświetl wynik wywołania funkcji w konsoli.
+
+// const numbers = [12, 5, 8, 14, 3, 16];
+// const checkEvenNumbers = (numbers) =>
+//   numbers.every((number) => number % 2 !== 0 || number > 10);
+// console.log(checkEvenNumbers(numbers));
+
+// Napisz funkcję hasPremiumProduct, która przyjmuje tablicę obiektów produktów. Funkcja powinna zwracać true, jeśli przynajmniej jeden produkt w tablicy
+// kosztuje więcej niż 50 jednostek i jego nazwa zawiera przynajmniej 5 znaków.
+// Użyj odpowiedniej metody do iteracji po elementach tablicy.
+// Wyświetl wynik wywołania funkcji w konsoli.
+
+// const products = [
+//   { name: "Apple", price: 30 },
+//   { name: "Orange", price: 21 },
+//   { name: "Banana", price: 15 },
+//   { name: "Cherry", price: 22 },
+//   { name: "Watermelon", price: 55 },
+// ];
+
+// const hasPremiumProduct = (products) =>
+//   products.some((product) => product.price > 50 && product.name.length >= 5);
+
+// console.log(hasPremiumProduct(products));
